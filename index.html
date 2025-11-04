@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comissariado JIJI - Autorizações de Viagem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .welcome-section {
+            margin-bottom: 40px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .welcome-section h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .welcome-section p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .info-box {
+            background: #f0f4ff;
+            border-left: 4px solid #2a5298;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .info-box h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .info-box li {
+            margin: 8px 0;
+        }
+
+        .downloads-section {
+            margin-top: 40px;
+        }
+
+        .downloads-section h2 {
+            color: #1e3c72;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .download-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .download-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: block;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        .download-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .download-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .download-card p {
+            font-size: 0.95em;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+
+        /* Responsividade para mobile */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .welcome-section h2,
+            .downloads-section h2 {
+                font-size: 1.4em;
+            }
+
+            .welcome-section p {
+                font-size: 1em;
+            }
+
+            .info-box {
+                padding: 15px;
+            }
+
+            .download-card {
+                padding: 20px;
+            }
+
+            .download-card .icon {
+                font-size: 2.5em;
+            }
+
+            .download-card h3 {
+                font-size: 1.1em;
+            }
+
+            .download-card p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.3em;
+            }
+
+            .welcome-section h2,
+            .downloads-section h2 {
+                font-size: 1.2em;
+            }
+
+            .download-card .icon {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Juizado da Infância e Juventude Infracional</h1>
+            <h2>Comissariado - Aeroporto de Manaus</h2>
+            <p>Autorizações de Viagem para Menores de Idade</p>
+        </div>
+
+        <div class="content">
+            <div class="welcome-section">
+                <h2>Bem-vindo(a)</h2>
+                <p>
+                    O Comissariado do Juizado da Infância e Juventude Infracional atua no Aeroporto Internacional
+                    Eduardo Gomes, em Manaus, com o objetivo de garantir a proteção e segurança de crianças e
+                    adolescentes em viagens aéreas.
+                </p>
+                <p>
+                    Nesta página, você encontra todos os documentos necessários para autorizar a viagem de menores
+                    de idade, seja em território nacional ou internacional, bem como autorizações para hospedagem.
+                </p>
+
+                <div class="info-box">
+                    <h3>Informações Importantes:</h3>
+                    <ul>
+                        <li>Menores de 16 anos desacompanhados dos pais precisam de autorização judicial</li>
+                        <li>Para viagens internacionais, a autorização deve ser reconhecida em cartório</li>
+                        <li>Os documentos devem ser preenchidos com letra legível ou digitados</li>
+                        <li>Leia atentamente o informativo antes de preencher as autorizações</li>
+                        <li>Em caso de dúvidas, entre em contato com o Comissariado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="downloads-section">
+                <h2>Documentos para Download</h2>
+
+                <div class="download-grid">
+                    <a href="INFORMATIVO - COMISSARIADO - 2024.pdf" class="download-card" download>
+                        <div class="icon">📋</div>
+                        <h3>Informativo Geral</h3>
+                        <p>Orientações e informações importantes sobre as autorizações de viagem</p>
+                    </a>
+
+                    <a href="MODELO DE AUTORIZAÇÃO DE VIAGEM NACIONAL - 2025.pdf" class="download-card" download>
+                        <div class="icon">✈️</div>
+                        <h3>Autorização de Viagem Nacional</h3>
+                        <p>Modelo para viagens dentro do território brasileiro</p>
+                    </a>
+
+                    <a href="MODELO DE AUTORIZAÇÃO DE VIAGEM INTERNACIONAL-2025.pdf" class="download-card" download>
+                        <div class="icon">🌎</div>
+                        <h3>Autorização de Viagem Internacional</h3>
+                        <p>Modelo para viagens ao exterior (requer reconhecimento de firma)</p>
+                    </a>
+
+                    <a href="Modelo autorizacao para hospedagem de crianca ou adolecente (1).pdf" class="download-card" download>
+                        <div class="icon">🏨</div>
+                        <h3>Autorização de Hospedagem</h3>
+                        <p>Modelo para autorizar hospedagem de criança ou adolescente</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Juizado da Infância e Juventude Infracional - Comissariado</strong></p>
+            <p>Aeroporto Internacional Eduardo Gomes - Manaus/AM</p>
+            <p>© 2025 - Tribunal de Justiça do Amazonas</p>
+        </div>
+    </div>
+</body>
+</html>
